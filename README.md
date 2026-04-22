@@ -170,7 +170,7 @@ obsidian-paper-curator/
 ---
 ## 使用流程演示
 
-**前置准备**：安装 [Kimi Code CLI](https://github.com/moonshot-ai/kimi-cli)、[Obsidian](https://obsidian.md/)，并推荐在 Obsidian 中安装 **Dataview** 插件。
+**前置准备**：安装 [Kimi Code CLI](https://www.kimi.com/code)、[Obsidian](https://obsidian.md/)，并推荐在 Obsidian 中安装 **Dataview** 插件。
 
 ### 1. 克隆项目并启动
 

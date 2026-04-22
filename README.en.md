@@ -171,7 +171,7 @@ obsidian-paper-curator/
 
 ## Usage Walkthrough
 
-**Prerequisites**: Install [Kimi Code CLI](https://github.com/moonshot-ai/kimi-cli) and [Obsidian](https://obsidian.md/). We also recommend installing the **Dataview** plugin in Obsidian.
+**Prerequisites**: Install [Kimi Code CLI](https://www.kimi.com/code) and [Obsidian](https://obsidian.md/). We also recommend installing the **Dataview** plugin in Obsidian.
 
 ### 1. Clone and Launch
 
