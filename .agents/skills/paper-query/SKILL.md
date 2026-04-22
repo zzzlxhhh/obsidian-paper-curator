@@ -21,9 +21,7 @@ wiki coverage is incomplete.
 Transform a user question into:
 1. A **targeted, cited answer** grounded in the most appropriate depth of evidence.
 2. A **persisted query record** under `queries/<topic>/` that preserves the refined
-   question and full answer for future reference.
-3. Optionally, a **new wiki page** capturing the synthesis if the answer reveals
-   comparisons, novel connections, or cross-cutting analysis worth preserving.
+   question and full answer for future user reference. No new wiki pages are created.
 
 ---
 
@@ -72,8 +70,10 @@ This is a planning heuristic, not a rigid rule. Re-evaluate after each layer.
 **Goal:** Build a mental map of where relevant knowledge lives without reading full pages.
 
 1. **Read `index.md`** in full.
-2. **Grep for keywords** across the vault (`papers/`, `concepts/`, `Clippings/`)
+2. **Grep for keywords** across `papers/`, `concepts/`, and `Clippings/`
    to discover pages whose titles or summaries match the query.
+   **Deliberately exclude `queries/`** from all searches to avoid circular
+   contamination and model hallucination from prior answers.
 3. **Scan directory listings** (`papers/*`, `concepts/*`, `Clippings/*.md`) for
    relevant filenames.
 4. **Compile a candidate list** with one-line relevance notes:
@@ -195,6 +195,10 @@ Compose a response that directly addresses the user's question.
 
 Every query must be archived as a read-only record under `queries/`.
 
+> **Isolation rule:** Query records are user-managed archives. They are saved to
+> `queries/` but are **never** referenced in `index.md` or `log.md`, and they are
+> excluded from all future retrieval layers.
+
 1. **Determine the topic folder:**
    - Look at the primary topic of the consulted papers/concepts.
    - Use the same canonical topic slugs as `paper-injest`:
@@ -240,64 +244,31 @@ Every query must be archived as a read-only record under `queries/`.
 
 ---
 
-### Phase 7: Decide Whether to Create Synthesis
+### Phase 7: No Wiki Mutation
 
-After archiving the query record, evaluate whether the answer also represents
-**durable wiki value** deserving a standalone concept or synthesis page:
+To prevent context contamination and model hallucination:
+- **Do not** create any new wiki pages (including concept pages, synthesis pages,
+  or topic pages) as a direct result of a query.
+- **Do not** update `index.md` or `log.md` with query records or query-derived
+  summaries.
+- The only permitted artifact is the read-only query record under `queries/`
+  (Phase 6).
 
-| Criterion | Action |
-|---|---|
-| Simple factual lookup (answer exists on one page) | Do **not** create a new page. |
-| Comparison across 2+ papers or concepts | **Create** a synthesis page. |
-| Novel connection not explicitly stated in any single page | **Create** a synthesis page. |
-| Cross-cutting analysis that could be referenced later | **Create** a synthesis page. |
-| Clarification of a contradiction or gap | **Create** a synthesis page (or update an existing concept page). |
-| Answer relied heavily on external augmentation due to missing wiki coverage | Suggest ingestion; do **not** persist external-only synthesis unless the synthesis itself is novel. |
-
-**Ask the user** if uncertain: "This analysis compares X and Y — should I save it as a
-new wiki page?"
+> Rationale: Query answers are ephemeral, user-managed digests. Ingesting them
+> back into the wiki graph risks polluting the knowledge base with unverified
+> synthesis and creating feedback loops where future queries cite prior LLM
+> answers instead of primary sources.
 
 ---
 
-### Phase 8: Create the Synthesis Page (if applicable)
-
-If the answer merits persistence:
-
-1. **Choose a location and title:**
-   - Cross-paper comparison or method analysis → `concepts/<Descriptive Title>.md`
-   - Topic-specific synthesis → `papers/<topic>/<Descriptive Title>.md`
-   - General wiki-level analysis → `<Descriptive Title>.md` in the vault root.
-
-2. **Write the page:**
-   - YAML frontmatter: `tags: [synthesis]` (plus any relevant topic tags).
-   - A clear H1 title.
-   - Body that captures the analysis, comparison, or connection.
-   - Heavy use of wikilinks `[[...]]` to the source pages.
-   - A "Sources" section listing all consulted pages.
-
-3. **Update `index.md`:**
-   - Add the new page under the appropriate category with a one-line summary.
-
-4. **Update `log.md`:**
-   - Append an entry:
-     ```markdown
-     ## [YYYY-MM-DD] query | <Question summary>
-     - Layers used: L1, L2, (L3), (L4)
-     - Query record: queries/<topic>/<YYYY-MM-DD>-<Short Title>.md
-     - Consulted: [[Page1]], [[Page2]], ...
-     - Created synthesis: [[<Descriptive Title>]] (if applicable)
-     ```
-
----
-
-### Phase 9: Deliver the Answer
+### Phase 8: Deliver the Answer
 
 Present the synthesized answer to the user. Mention the archived query record
 (e.g., "Saved to `queries/reinforcement-learning/2026-04-22-grpo-vs-ppo.md`") so
 they know it is preserved for future reference.
 
-If a new synthesis page was created, mention it and provide the wikilink so the
-user can navigate to it in Obsidian.
+Do **not** mention or create any new wiki pages; the query record under
+`queries/` is the only persisted artifact.
 
 ---
 
@@ -311,8 +282,9 @@ user can navigate to it in Obsidian.
 - **Concise**: Prefer synthesis over quoting large blocks of text.
 - **Linked**: The answer itself should be dense with wikilinks so the user can explore
   deeper in Obsidian.
-- **Persistent**: High-value analyses (comparisons, new connections) are filed back into
-  the wiki so the knowledge compounds.
+- **Persistent**: Query records are archived under `queries/` for user reference, but
+  are never fed back into the wiki graph, `index.md`, `log.md`, or used as evidence
+  in subsequent retrievals.
 - **Transparent**: Web-sourced external augmentation is flagged with `[External: <URL>]`. Contradictions are always surfaced.
 
 ---
@@ -324,7 +296,8 @@ LLMwiki/
 ├── index.md                # Layer 1 entry point: read first
 ├── papers/<topic>/         # Layer 2: processed paper summaries
 ├── concepts/               # Layer 2: shared concept + synthesis pages
-├── queries/<topic>/        # Archived question–answer pairs (read-only after creation)
+├── queries/<topic>/        # Archived Q&A pairs (read-only; excluded from all
+│                             retrieval and indexing to prevent contamination)
 ├── Clippings/              # Layer 3: raw, unprocessed sources (read-only)
 ├── Clippings/_processed/   # Layer 3: archived raw sources (read-only)
 └── log.md                  # Query audit trail
