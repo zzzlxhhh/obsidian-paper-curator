@@ -208,4 +208,4 @@ Kimi generates complete notes covering Background, Challenges, Solution, Positio
 
 Once the knowledge base is organized, you can query it directly. Invoke the `paper-query` skill in Kimi to ask your question; the Q&A record is automatically archived to `./queries/` for future reference:
 
-![Querying with paper-query](./raw/s5.png)
+![Querying with paper-query](./raw/s6.png)

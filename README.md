@@ -207,4 +207,4 @@ Kimi 会生成包含 Background、Challenges、Solution、Positioning、Experime
 
 知识库整理完毕后，就可以直接基于 wiki 进行问答了。在 Kimi 中调用 `paper-query` 提出你的问题，问答记录会自动归档到 `./queries/` 中，方便日后回溯：
 
-![调用 paper-query 提问](./raw/s5.png)
+![调用 paper-query 提问](./raw/s6.png)
