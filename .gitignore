@@ -1,0 +1,24 @@
+# Obsidian plugins (third-party, should be installed via Obsidian Community Plugins)
+.obsidian/plugins/
+
+# Raw sources (PDFs, images, datasets) — too large for git
+# Keep the directory but ignore contents
+raw/*
+!raw/.gitkeep
+
+# Processed clippings archive (can grow very large)
+Clippings/_processed/*
+!Clippings/_processed/.gitkeep
+
+# LintLog reports (generated automatically, can be regenerated)
+LintLog/*
+!LintLog/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*.swp
+*.swo
+*~

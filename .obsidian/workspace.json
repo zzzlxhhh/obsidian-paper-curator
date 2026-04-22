@@ -1,0 +1,233 @@
+{
+  "main": {
+    "id": "825f041bdbb5bf18",
+    "type": "split",
+    "children": [
+      {
+        "id": "9befa4b1f2a0a562",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e414a92df6977931",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "607e61bf34b821e0",
+    "type": "split",
+    "children": [
+      {
+        "id": "6ed52dcda9053268",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "834f82db57646624",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "04d08dcb66760d31",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "2c1e7c5173a4622a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d264371c40047046",
+    "type": "split",
+    "children": [
+      {
+        "id": "02d289f56662917e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e62de4c4551aa8fd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "raw/SageAttention.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "SageAttention 的反向链接列表"
+            }
+          },
+          {
+            "id": "0ab4b4869d8721eb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "raw/SageAttention.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "SageAttention 的出链列表"
+            }
+          },
+          {
+            "id": "d3c97e95b0bf0bee",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "995580c57db45c2b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "886d4b33abde17ec",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "raw/SageAttention.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "SageAttention 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "marp-slides:Show Slide Preview": false
+    }
+  },
+  "active": "834f82db57646624",
+  "lastOpenFiles": [
+    "LintLog",
+    "Clippings/DINO-WM World Models on Pre-trained Visual Features enable Zero-shot Planning.md",
+    "queries",
+    "Clippings/DINOv2 Learning Robust Visual Features without Supervision.md",
+    "Clippings/Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture.md",
+    "Clippings/LeWorldModel Stable End-to-End Joint-Embedding Predictive Architecture from Pixels.md",
+    "Clippings/Masked Autoencoders Are Scalable Vision Learners.md",
+    "AGENTS.md",
+    "concepts",
+    "papers",
+    "papers/inference-optimization/Orphan Paper.md",
+    "papers/inference-optimization/FlashAttention.md",
+    "papers/inference-optimization",
+    "concepts/Attention Mechanism.md",
+    "concepts/KV Cache.md",
+    "LLM wiki (Readme first to build this obsidian repo).md",
+    "README.en.md",
+    "README.md",
+    "papers/LLM Inference",
+    "papers/Reinforement Learning",
+    "papers/Inference",
+    "papers/reinforcement-learning/RhymeRL.md",
+    "Clippings/AReaL A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning.md",
+    "papers/reinforcement-learning/AReaL.md",
+    "concepts/PPO.md",
+    "concepts/GRPO.md",
+    "concepts/Speculative Decoding.md",
+    "papers/papers-index.md",
+    "papers/reinforcement-learning/StreamRL.md",
+    "concepts/Asynchronous RL.md",
+    "concepts/Agentic Workflows.md",
+    "Clippings/_processed/StreamRL Scalable, Heterogeneous, and Elastic RL for LLMs with Disaggregated Stream Generation.md",
+    "Clippings/_processed/History Rhymes Accelerating LLM Reinforcement Learning with RhymeRL.md",
+    "papers/reinforcement-learning",
+    "Clippings/_processed",
+    "raw/f6-sta.png",
+    "papers/multimodal",
+    "raw/x9.png",
+    "raw/x7.png",
+    "raw/f6-swa.png",
+    "raw/reorder.png",
+    "raw/human_eval.png",
+    "raw/x6.png",
+    "raw/x5.png",
+    "raw/x3.png",
+    "raw/x2.png",
+    "未命名.canvas"
+  ]
+}
