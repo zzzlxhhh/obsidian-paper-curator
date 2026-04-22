@@ -7,6 +7,9 @@ raw/*
 !raw/.gitkeep
 !raw/*.png
 
+# Unprocessed clippings (inbox — should not be committed)
+Clippings/*.md
+
 # Processed clippings archive (can grow very large)
 Clippings/_processed/*
 !Clippings/_processed/.gitkeep
