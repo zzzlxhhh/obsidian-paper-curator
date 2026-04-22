@@ -1,5 +1,5 @@
-# Obsidian plugins (third-party, should be installed via Obsidian Community Plugins)
-.obsidian/plugins/
+# Obsidian configuration and plugins
+.obsidian/
 
 # Raw sources (PDFs, images, datasets) — too large for git
 # Keep the directory but ignore contents
