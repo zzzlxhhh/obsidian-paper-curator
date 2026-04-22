@@ -201,8 +201,12 @@ Taking World Model papers as an example, invoke the `paper-injest` skill in Kimi
 
 ![Invoking paper-injest to organize papers](./raw/s4.png)
 
-### 4. Review Results
-
-Kimi generates complete notes covering Background, Challenges, Solution, Positioning, and Experiments. The **Positioning** section, in particular, is where Kimi k2.6 shines — it compares related work in detailed lists and attaches a Summary Table as requested:
+Kimi generates complete notes covering Background, Challenges, Solution, Positioning, and Experiments. The **Positioning** section is a particular highlight — Kimi k2.6 compares related work in detailed lists and attaches a Summary Table:
 
 ![Final Result: Paper Summary and Comparison Table](./raw/s5.png)
+
+### 4. Ask the Wiki
+
+Once the knowledge base is organized, you can query it directly. Invoke the `paper-query` skill in Kimi to ask your question; the Q&A record is automatically archived to `./queries/` for future reference:
+
+![Querying with paper-query](./raw/s5.png)
