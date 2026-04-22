@@ -44,8 +44,7 @@ The entire workflow is driven by three Agent Skills. They are not independent to
     ┌───────────────┐
     │  paper-lint   │  Maintain: check link health, fix structural issues
     └───────┬───────┘
-            ↓
-        Back to injest
+
 ```
 
 ### paper-injest: Automated Ingestion & Structuring
