@@ -162,7 +162,7 @@ Append to `log.md`:
 ## Directory Conventions
 
 ```
-LLMwiki/
+obsidian-paper-curator/
 ├── LintLog/                # Timestamped lint reports (created by this skill)
 ├── concepts/               # May be modified: new pages added
 ├── papers/<topic>/         # May be modified: links added

@@ -2,7 +2,7 @@
 tags: [index]
 ---
 
-# LLM Wiki Index
+# obsidian-paper-curator Index
 
 ## Reinforcement Learning
 

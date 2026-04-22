@@ -1,4 +1,4 @@
-# AGENTS.md — LLM Wiki (Obsidian Vault)
+# AGENTS.md — obsidian-paper-curator (Obsidian Vault)
 
 > This file describes the structure, conventions, and workflows for AI agents working in this repository.
 > This is an **Obsidian vault** used to build and maintain a personal knowledge base (wiki) with LLM assistance.
@@ -32,7 +32,7 @@ Core concept documents:
 ## Directory Structure
 
 ```
-LLMwiki/
+obsidian-paper-curator/
 ├── .agents/
 │   └── skills/                 # Modular agent capabilities. Each subdirectory is a reusable
 │                                 skill containing a SKILL.md that defines a standard operating

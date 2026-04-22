@@ -1,4 +1,4 @@
-# LLM Wiki — 论文阅读与个人知识库
+# obsidian-paper-curator — 论文阅读与个人知识库
 
 > 用 Kimi CLI + Obsidian 做的个人的论文 wiki。让 LLM 替你做那些「整理和建链接」的脏活累活，你只需要负责阅读和深度思考。
 
@@ -15,7 +15,7 @@
 
 Obsidian 这类笔记工具很容易在散漫的管理状态中越来越混乱，阅读和思考反而是简单且随时可以进行的，**整理**笔记却是痛苦且消耗的。枯燥的交叉引用、矛盾检测、概念归类，干脆交给LLM吧。这些收集的论文顶多就是吃灰和消耗token，大不了就是收集了但是从来不看不学，起码不会堆成屎山消耗使用者的心力，让人眼见心烦。
 
-这个项目是一个基于 **Kimi CLI + Obsidian** 的 LLM Wiki，功能部分启发自Karpathy文章[LLM wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)中的方法论，结合个人使用习惯做了下面的设计：
+**obsidian-paper-curator** 是一个基于 **Kimi CLI + Obsidian** 的 LLM Wiki，功能部分启发自 Karpathy 文章 [LLM wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 中的方法论，结合个人使用习惯做了如下设计：
 
 - 现在大部分论文都会有html版本（比 PDF 更 LLM friendly），arxiv上都会有查看html的选项，我们可以用 Obsidian Web Clipper 一键剪藏感兴趣的论文（或技术博客）；
 - 扔给 Kimi CLI，通过三个agent skill: paper-injest, paper-query, paper-lint 来自动阅读、摘要、提取概念、建立交叉引用、管理wiki仓库；
@@ -132,7 +132,7 @@ paper-query：基于 wiki 回答复杂问题，自动归档到 queries/（不写
 ## 目录速览
 
 ```
-LLMwiki/
+obsidian-paper-curator/
 ├── .agents/skills/         # Agent 技能定义
 │   ├── paper-injest/       # 论文摄入 skill
 │   │   └── references/

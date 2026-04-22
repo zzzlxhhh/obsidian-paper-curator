@@ -292,7 +292,7 @@ Do **not** mention or create any new wiki pages; the query record under
 ## Directory Conventions
 
 ```
-LLMwiki/
+obsidian-paper-curator/
 ├── index.md                # Layer 1 entry point: read first
 ├── papers/<topic>/         # Layer 2: processed paper summaries
 ├── concepts/               # Layer 2: shared concept + synthesis pages

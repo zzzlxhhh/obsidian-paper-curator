@@ -5,6 +5,7 @@
 # Keep the directory but ignore contents
 raw/*
 !raw/.gitkeep
+!raw/*.png
 
 # Processed clippings archive (can grow very large)
 Clippings/_processed/*

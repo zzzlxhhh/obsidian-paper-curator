@@ -261,7 +261,7 @@ skills (e.g. `paper-query`) but is excluded from future ingest scans.
 ## Directory Conventions
 
 ```
-LLMwiki/
+obsidian-paper-curator/
 ├── Clippings/              # Pending papers (inbox). Read but never modify.
 │   └── _processed/         # EXCLUDED from paper-injest. Reserved for other
 │                           # skills (e.g. paper-query). Do not read or write.

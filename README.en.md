@@ -1,4 +1,4 @@
-# LLM Wiki — Paper Reading & Personal Knowledge Base
+# obsidian-paper-curator — Paper Reading & Personal Knowledge Base
 
 > A personal paper wiki powered by **Kimi CLI + Obsidian**. Let the LLM do the tedious work of organizing and linking — you just read and think deeply.
 
@@ -15,7 +15,7 @@ When reading papers, do you ever feel this way?
 
 Tools like Obsidian easily spiral into chaos without disciplined maintenance. Reading and thinking are effortless; **curation** is painful and draining. Tedious cross-referencing, contradiction detection, and concept classification — just hand them to the LLM. The collected papers might just gather dust and burn tokens at worst, but at least they won't pile into an unmaintainable mess that drains your energy every time you look at it.
 
-This project is an **LLM Wiki** built on **Kimi CLI + Obsidian**. The design is partly inspired by Karpathy's [LLM wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) methodology, adapted to personal usage habits:
+**obsidian-paper-curator** is an **LLM Wiki** built on **Kimi CLI + Obsidian**. The design is partly inspired by Karpathy's [LLM wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) methodology, adapted to personal usage habits:
 
 - Most papers now offer HTML versions (more LLM-friendly than PDF), and arXiv provides an HTML view option. You can clip papers (or technical blog posts) with a single click using the Obsidian Web Clipper;
 - Feed them to Kimi CLI, which uses three agent skills — **paper-injest**, **paper-query**, and **paper-lint** — to automatically read, summarize, extract concepts, build cross-references, and manage the wiki repository;
@@ -131,7 +131,7 @@ Sources aren't limited to papers — any high-quality technical content works: a
 ## Quick Directory Overview
 
 ```
-LLMwiki/
+obsidian-paper-curator/
 ├── .agents/skills/         # Agent skill definitions
 │   ├── paper-injest/       # Paper ingestion skill
 │   │   └── references/
